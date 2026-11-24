@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-24",
+  "environment": "Local Next.js production server; Codex in-app browser",
+  "results": [
+    {"test":"Add the same product twice","result":"PASS","observed":"One Studio Wireless line, quantity 2, line subtotal INR 9998"},
+    {"test":"Add a second product","result":"PASS","observed":"Everyday Tote quantity 1; count 3; total INR 11497"},
+    {"test":"Increase quantity","result":"PASS","observed":"Studio Wireless quantity 3 plus tote quantity 1; count 4; total INR 16496"},
+    {"test":"Decrease and remove","result":"PASS","observed":"Headphones restored to 2; removing tote leaves count 2 and INR 9998"},
+    {"test":"Refresh persistence","result":"PASS","observed":"Quantity 2 restored after page reload"},
+    {"test":"Checkout matches cart","result":"PASS","observed":"Headphones 2 at INR 4999 plus tote 1 at INR 1499; total INR 11497"},
+    {"test":"Confirm demo checkout","result":"PASS","observed":"Demo order confirmed; button disabled; no charge or order dispatch"},
+    {"test":"Case insensitive search","result":"PASS","observed":"STUDIO shows exactly one product"},
+    {"test":"No-match search","result":"PASS","observed":"No essentials found; Reset filters available"},
+    {"test":"Reset filters","result":"PASS","observed":"All six products restored"},
+    {"test":"Category filter","result":"PASS","observed":"Audio shows exactly two products"},
+    {"test":"Price sorting","result":"PASS","observed":"Ascending prices 1499, 2499, 3499, 3999, 4999, 8999"},
+    {"test":"Unknown product page","result":"PASS","observed":"Friendly not-found UI with Browse the collection action"},
+    {"test":"Real API failure","result":"PASS","observed":"Separate production server on port 3001 with PRODUCT_API_FAILURE=1 returns HTTP 503; UI shows connection message and Try again"},
+    {"test":"Retry while API remains unavailable","result":"PASS","observed":"Try again retains useful failure message without crashing"},
+    {"test":"Empty cart and checkout","result":"PASS","observed":"Removing every line shows empty bag; direct checkout blocks empty bag with browse action"},
+    {"test":"Narrow viewport","result":"PASS","observed":"Single-column hero and two-column catalog; measured page width 475 <= viewport 494 CSS px; no horizontal overflow"},
+    {"test":"Add from detail page","result":"PASS","observed":"Add to bag creates quantity 1 and cart total INR 4999"},
+    {"test":"Browser console","result":"PASS","observed":"No captured error-level console messages in normal workflow"}
+  ],
+  "notes": "Screenshots are unannotated browser captures without mouse pointer overlays. The temporary failure server was stopped after testing. The normal store remains available on port 3000. Recovery after restarting the failure server was not recorded because its browser tab became unavailable; no recovery success is claimed."
+}
