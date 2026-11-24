@@ -1,0 +1,50 @@
+{
+  "testedAt": "2026-11-24T14:23:44.708Z",
+  "base": "http://127.0.0.1:3000",
+  "results": [
+    {
+      "name": "API returns six complete products",
+      "status": "PASS"
+    },
+    {
+      "name": "API search is case insensitive",
+      "status": "PASS"
+    },
+    {
+      "name": "API category filter returns matching products",
+      "status": "PASS"
+    },
+    {
+      "name": "No-match search returns an empty list",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown product API ID returns 404",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid category returns 400",
+      "status": "PASS"
+    },
+    {
+      "name": "Oversized search returns 400",
+      "status": "PASS"
+    },
+    {
+      "name": "Unsupported POST returns 405",
+      "status": "PASS"
+    },
+    {
+      "name": "Every required page opens directly",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown product page returns 404",
+      "status": "PASS"
+    },
+    {
+      "name": "Home redirects to catalog",
+      "status": "PASS"
+    }
+  ]
+}
